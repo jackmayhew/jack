@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const route = useRoute()
 const { isMobile } = useDetectMobile()
+
 setupHead()
 
 const initialLoad = ref<boolean>(true)
@@ -8,18 +8,19 @@ const mainContentRef = ref<HTMLDivElement | null>(null)
 
 provide('initialLoad', initialLoad)
 
-watch(() => route.path, () => {
-  initialLoad.value = false
-})
-
 onMounted(() => {
-  const { cleanup } = pageLoadGSAP(mainContentRef.value)
+  const { cleanup } = pageLoadGSAP(mainContentRef.value, () => {
+    initialLoad.value = false
+  })
   onUnmounted(cleanup)
 })
 </script>
 
 <template>
-  <div class="wrapper max-w-screen-md mx-auto" :class="{ 'no-transition': isMobile }">
+  <div
+    class="wrapper max-w-screen-md mx-auto"
+    :class="{ 'no-transition': isMobile }"
+  >
     <Navbar class="relative max-w-screen-md mx-auto" />
     <div ref="mainContentRef" class="main-content px-6 mt-[6.5rem] invisible">
       <slot />

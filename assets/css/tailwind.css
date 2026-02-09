@@ -32,7 +32,9 @@ html,
 html.no-transition,
 html.no-transition .hamburger-button,
 html.no-transition .work-text,
-html.no-transition .navbar {
+html.no-transition .navbar,
+html.no-transition input
+html.no-transition textarea {
   transition: none;
 }
 
@@ -41,6 +43,7 @@ html.light-mode {
   color: #121212;
   color-scheme: light;
 }
+
 .light-mode .navbar {
   background-color: #fdfaf5;
 }
