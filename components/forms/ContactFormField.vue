@@ -16,7 +16,7 @@ const inputType = computed(() => props.type || 'text')
 
 const inputClasses = computed(() => [
   // base styles for all states
-  'p-2 rounded-md text-base border-2 dark:bg-transparent duration-200 ease-in-out focus:outline-none focus:ring-2 border-neutral-500 dark:border-neutral-600',
+  'ring-0 p-2 rounded-md text-base border-2 dark:bg-transparent duration-20s0 ease-in-out focus:outline-none focus:ring-2 border-neutral-500 dark:border-neutral-600',
 
   // conditionals
   props.error

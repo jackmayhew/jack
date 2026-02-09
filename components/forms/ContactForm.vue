@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ContactForm } from '~/types/contact/contact.types'
-import { Send } from 'lucide-vue-next'
+import { Check, Copy, Send } from 'lucide-vue-next'
 import { emailAddress } from '~/constants/social-links'
 import { contactSchema } from '~/types/contact/contact.types'
 
@@ -13,6 +13,7 @@ const loading = ref(false)
 const submissionStatus = ref<'success' | 'error' | null>(null)
 const flashError = ref(false)
 const formRef = ref<HTMLElement | null>(null)
+const emailCopied = ref(false)
 
 // --- helpers ---
 function clearError(field: keyof Omit<ContactForm, 'honeypot'>) {
@@ -42,6 +43,12 @@ function handleError() {
   setTimeout(() => {
     flashError.value = false
   }, 500)
+}
+
+function copyEmail() {
+  navigator.clipboard.writeText(emailAddress)
+  emailCopied.value = true
+  setTimeout(() => emailCopied.value = false, 2000)
 }
 
 // --- core logic ---
@@ -116,11 +123,20 @@ async function submitForm() {
           {{ emailAddress }}
         </a>
       </h3>
-      <h3 v-else>
-        Send a message, or email me directly at
-        <a :href="`mailto:${emailAddress}`">
+      <h3 v-else class="items-center gap-2">
+        Send a message, or email me directly at:
+        <button
+          class="inline-flex items-center gap-2"
+          @click="copyEmail"
+        >
           {{ emailAddress }}
-        </a>
+          <Transition name="fade" mode="out-in">
+            <BaseIcon
+              :key="emailCopied ? 'check' : 'copy'"
+              :icon="emailCopied ? Check : Copy" :size="16"
+            />
+          </Transition>
+        </button>
       </h3>
     </div>
 
@@ -188,7 +204,6 @@ input:-webkit-autofill {
   box-shadow: 0 0 0 1000px #121212 inset;
 }
 
-/* shake animation for error feedback */
 .animate-shake {
   animation: shake 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
@@ -206,5 +221,12 @@ input:-webkit-autofill {
   40%, 60% {
     transform: translateX(4px);
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.1s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>
