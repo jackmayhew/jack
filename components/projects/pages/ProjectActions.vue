@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Github, Link } from 'lucide-vue-next'
+
 defineProps<{
   url: string
   githubUrl?: string
@@ -10,7 +12,7 @@ defineProps<{
     <ButtonLinkExternal
       :url="url"
       text="Visit"
-      icon-name="lucide:link"
+      :icon="Link"
       :icon-size="18"
       width="150px"
     />
@@ -18,7 +20,7 @@ defineProps<{
       v-if="githubUrl"
       :url="githubUrl"
       text="Code"
-      icon-name="lucide:github"
+      :icon="Github"
       :icon-size="18"
       width="150px"
     />

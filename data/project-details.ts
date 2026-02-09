@@ -1,7 +1,6 @@
 import type { ProjectDetails } from '~/types/project/project-details-types'
 import { githubUsername } from '~/constants/social-links'
 
-// considered a markdown file, but felt overkill
 export const projectDetails: ProjectDetails[] = [
   {
     title: 'CampVI',

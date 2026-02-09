@@ -18,7 +18,7 @@ const handleError = () => clearError({ redirect: '/' })
       </h2>
       <div class="w-full max-w-3xl mx-auto">
         <div class="mt-4 text-lg">
-          <Button text="Go Home" width="150px" @click="handleError" />
+          <BasicButton text="Go Home" width="150px" @click="handleError" />
         </div>
       </div>
       <Footer />

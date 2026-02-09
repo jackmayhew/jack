@@ -182,7 +182,7 @@ onClickOutside(wrapper, (event) => {
               :rel="link.rel"
               :aria-label="link.type"
             >
-              <Icon :name="link.icon" :size="link.size" />
+              <BaseIcon :icon="link.icon" :size="link.size" />
             </a>
           </div>
         </div>

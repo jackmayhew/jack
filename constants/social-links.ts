@@ -1,3 +1,5 @@
+import { Github, Mail } from 'lucide-vue-next'
+
 export const twitterUsername = 'https://x.com/username'
 export const githubUsername = 'https://github.com/jackmayhew'
 export const emailAddress = 'hello@jackmayhew.com'
@@ -9,7 +11,7 @@ export const socialLinks = [
     href: githubUsername,
     target: '_blank',
     rel: 'noopener',
-    icon: 'lucide:github',
+    icon: Github,
     size: 36,
   },
   // {
@@ -22,7 +24,7 @@ export const socialLinks = [
   {
     type: 'email',
     href: `mailto:${emailAddress}`,
-    icon: 'lucide:mail',
+    icon: Mail,
     size: 36,
   },
 ]

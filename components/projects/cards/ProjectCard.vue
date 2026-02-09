@@ -2,6 +2,7 @@
 import type { ProjectCard } from '~/types/project/project-card.types'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ArrowRight, Link } from 'lucide-vue-next'
 
 defineProps<{
   project: ProjectCard
@@ -60,14 +61,14 @@ onMounted(() => {
         <ButtonLinkExternal
           :url="project.url"
           text="Visit"
-          icon-name="lucide:link"
+          :icon="Link"
           :icon-size="18"
           width="150px"
         />
         <ButtonLink
           :url="`/projects/${project.slug}`"
           text="Details"
-          icon-name="lucide:arrow-right"
+          :icon="ArrowRight"
           :icon-size="20"
           width="150px"
         />

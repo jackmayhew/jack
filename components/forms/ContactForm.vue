@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ContactForm } from '~/types/contact/contact.types'
+import { Send } from 'lucide-vue-next'
 import { emailAddress } from '~/constants/social-links'
 import { contactSchema } from '~/types/contact/contact.types'
 
@@ -163,10 +164,11 @@ async function submitForm() {
       />
 
       <div class="w-full" :class="{ 'pointer-events-none': loading }">
-        <Button
+        <BasicButton
           :text="loading ? 'Sending...' : 'Send'"
-          icon-name="lucide:send"
-          :disabled="loading" width="100%"
+          :icon="Send"
+          :disabled="loading"
+          width="100%"
         />
       </div>
     </form>

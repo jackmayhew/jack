@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ArrowLeft } from 'lucide-vue-next'
+
 const router = useRouter()
 
 function goBack() {
@@ -16,6 +18,6 @@ function goBack() {
     class="absolute mt-[-25px] flex hover:-translate-x-0.5 transition-transform duration-150 pr-4"
     @click="goBack"
   >
-    <Icon name="lucide:arrow-left" size="22" />
+    <BaseIcon :icon="ArrowLeft" :size="22" />
   </button>
 </template>
