@@ -7,6 +7,11 @@ export default defineNuxtConfig({
   },
   ssr: false,
   devtools: { enabled: true },
+  imports: {
+    dirs: [
+      'composables/**',
+    ],
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/icon',
