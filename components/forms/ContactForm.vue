@@ -46,6 +46,8 @@ function handleError() {
 }
 
 function copyEmail() {
+  if (emailCopied.value)
+    return
   navigator.clipboard.writeText(emailAddress)
   emailCopied.value = true
   setTimeout(() => emailCopied.value = false, 2000)
