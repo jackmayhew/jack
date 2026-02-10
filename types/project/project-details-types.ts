@@ -3,7 +3,7 @@ export interface ProjectDetails {
   subtitle: string
   image: string
   paragraphs: (string | { text: string, link?: { text: string, url: string } })[]
-  techStack: string
+  stack: string
   url: string
   slug: string
   githubUrl?: string

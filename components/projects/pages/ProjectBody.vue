@@ -31,7 +31,7 @@ defineProps<{
       </a>
     </p>
     <p class="text-lg mb-6">
-      Built with: {{ project.techStack }}
+      Built with: {{ project.stack }}
     </p>
   </div>
 </template>
