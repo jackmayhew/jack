@@ -61,7 +61,7 @@ export const projectDetails: ProjectDetails[] = [
       `Loon handles that for you. It's a browser extension that shows Canadian alternatives while you shop online.`,
       `It was a solid project for tackling challenges like product matching, database design, and extension architecture.`,
     ],
-    stack: 'Vue 3, TypeScript, UnoCSS, Fastify, Supabase',
+    stack: 'Vue 3, TypeScript, UnoCSS, Fastify, PostgreSQL',
     url: 'https://getloon.ca/',
     githubUrl: `${githubUsername}/loon`,
   },
