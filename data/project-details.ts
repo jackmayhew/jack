@@ -9,7 +9,7 @@ export const projectDetails: ProjectDetails[] = [
     image: '/img/projects/soundle.webp',
     paragraphs: [
       `Soundle gives you a daily audio clip and you guess what it is. Get it wrong and the LLM gives you a hint to narrow it down.`,
-      `The puzzle difficulty had to feel fair. Too easy and it's boring. Too hard and people give up. Finding that balance took a lot of tweaking.`,
+      `The puzzle difficulty has to feel fair. Too easy and it's boring. Too hard and people give up. Finding that balance takes a lot of tweaking and will continue to be a WIP.`,
       `Getting the LLM to judge answers accurately was tricky too. It needed to accept creative responses without being too lenient.`,
       `Add in user stats, results sharing and a snappy UI, and it turned into a solid full-stack project. Fun!`,
     ],
@@ -37,14 +37,7 @@ export const projectDetails: ProjectDetails[] = [
     image: '/img/projects/refuge.webp',
     paragraphs: [
       `Refuge Kitty-Kat needed a new website. Their old one made it harder than it should've been for people to donate, volunteer, or adopt. I rebuilt it from scratch with those three things as the priority.`,
-
-      {
-        text: `The results have been good. More donations are flowing in, volunteer applications are up, and adoption rates are climbing. The site's also ranking well for local searches like: `,
-        link: {
-          text: `'cat rescue montreal.'`,
-          url: 'https://www.google.ca/search?q=cat+rescue+montreal',
-        },
-      },
+      `The results have been good. More donations are flowing in, volunteer applications are up, and adoption rates are climbing. The site's also ranking well for local searches like: ['cat rescue montreal.'](https://www.google.ca/search?q=cat+rescue+montreal)`,
       `Nice knowing the work is helping cats find homes.`,
     ],
     stack: 'Next.js, Tailwind, Hygraph',

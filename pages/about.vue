@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { about } from '~/data/about'
 
-useHead({
-  title: 'About',
-})
+useHead({ title: 'About' })
 </script>
 
 <template>
@@ -14,27 +12,20 @@ useHead({
     />
     <div class="w-full max-w-3xl mx-auto">
       <div class="mt-8 text-lg">
-        <div
-          v-for="(section, index) in about"
-          :key="index"
-          class="mt-6"
-        >
+        <div v-for="(section, index) in about" :key="index" class="mt-6">
           <h3 class="text-xl text-gray-500 font-semibold">
             {{ section.headline }}
           </h3>
-          <p>
-            {{ section.text }}
-            <NuxtLink
-              v-if="section.link"
-              class="underline"
-              :to="section.link.url"
-            >
-              {{ section.link.text }}
-            </NuxtLink>
-          </p>
+          <MDC :value="section.text" class="markdown-content" />
         </div>
       </div>
     </div>
     <Footer />
   </main>
 </template>
+
+<style scoped>
+:deep(.markdown-content a) {
+  @apply underline;
+}
+</style>

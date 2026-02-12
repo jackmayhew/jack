@@ -18,18 +18,12 @@ defineProps<{
         loading="eager"
       />
     </div>
-    <p v-for="(p, index) in project.paragraphs" :key="index" class="my-4 text-xl">
-      {{ typeof p === 'object' ? p.text : p }}
-      <a
-        v-if="typeof p === 'object' && p.link"
-        :href="p.link.url"
-        target="_blank"
-        rel="noopener"
-        class="underline"
-      >
-        {{ p.link.text }}
-      </a>
-    </p>
+    <MDC
+      v-for="(p, index) in project.paragraphs"
+      :key="index"
+      :value="p"
+      class="my-4 text-xl project-md-content"
+    />
     <p class="text-lg mb-6">
       Built with: {{ project.stack }}
     </p>

@@ -2,7 +2,7 @@ export interface ProjectDetails {
   title: string
   subtitle: string
   image: string
-  paragraphs: (string | { text: string, link?: { text: string, url: string } })[]
+  paragraphs: string[]
   stack: string
   url: string
   slug: string

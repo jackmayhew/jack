@@ -1,6 +1,5 @@
 import type { AboutItem } from '~/types/about/about-item.types'
 
-// considered a markdown file, but felt overkill
 export const about: AboutItem[] = [
   {
     headline: 'Intro',
@@ -20,10 +19,6 @@ export const about: AboutItem[] = [
   },
   {
     headline: 'Get in Touch',
-    text: `If you're around and want to chat, `,
-    link: {
-      url: '/contact',
-      text: 'drop me a message!',
-    },
+    text: `If you're around and want to chat, [drop me a message!](/contact)`,
   },
 ]

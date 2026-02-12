@@ -18,8 +18,13 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
     '@nuxtjs/sitemap',
+    '@nuxtjs/mdc',
   ],
   components: [
+    {
+      path: '~/components/prose',
+      global: true,
+    },
     {
       path: '~/components',
       pathPrefix: false,

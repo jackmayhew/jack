@@ -17,19 +17,9 @@ defineProps<{
         </time>
       </div>
     </div>
-    <div class="pl-6 sm:pl-8 text-lg">
-      <p>
-        {{ event.desc }}
-        <a
-          v-if="event.link"
-          :href="event.link.url"
-          target="_blank"
-          rel="noopener"
-          class="underline"
-        >
-          {{ event.link.text }}
-        </a>
-      </p>
+
+    <div class="pl-6 sm:pl-8 text-lg max-w-none">
+      <MDC :value="event.desc" class="markdown-content" />
     </div>
   </div>
 </template>

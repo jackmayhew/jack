@@ -18,9 +18,15 @@ useHead({
   <main class="relative">
     <BackButton />
     <div>
-      <Header :title="project.title" :subtitle="project.subtitle" />
+      <Header
+        :title="project.title"
+        :subtitle="project.subtitle"
+      />
       <ProjectBody :project="project" />
-      <ProjectActions :url="project.url" :github-url="project.githubUrl" />
+      <ProjectActions
+        :url="project.url"
+        :github-url="project.githubUrl"
+      />
     </div>
     <Footer />
   </main>

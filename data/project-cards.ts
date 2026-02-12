@@ -1,6 +1,5 @@
 import type { ProjectCard } from '~/types/project/project-card.types'
 
-// considered a markdown file, but felt overkill
 export const projectCards: ProjectCard[] = [
   {
     title: 'Soundle',
