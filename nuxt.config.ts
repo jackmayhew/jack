@@ -1,9 +1,9 @@
-import { websiteUrl } from './constants/social-links'
+import { WEBSITE_URL } from './constants/social-links'
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   site: {
-    url: websiteUrl,
+    url: WEBSITE_URL,
   },
   ssr: false,
   devtools: { enabled: true },

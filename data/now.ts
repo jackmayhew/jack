@@ -1,5 +1,5 @@
 import type { TimelineEvent } from '~/types/now/timeline-event.types'
-import { githubUsername } from '~/constants/social-links'
+import { GITHUB_USERNAME } from '~/constants/social-links'
 
 export const now: TimelineEvent[] = [
   {
@@ -10,7 +10,7 @@ export const now: TimelineEvent[] = [
   {
     displayDate: 'October 2024',
     formateDate: '2024-10-31',
-    desc: `Built a new portfolio website (the one you're on now). Kept it simple and minimalist. First time building with Nuxt and I'm really liking it. The developer experience is smooth and the tooling is solid. You can check out the code on my [GitHub](${githubUsername}/jack-portfolio).`,
+    desc: `Built a new portfolio website (the one you're on now). Kept it simple and minimalist. First time building with Nuxt and I'm really liking it. The developer experience is smooth and the tooling is solid. You can check out the code on my [GitHub](${GITHUB_USERNAME}/jack-portfolio).`,
   },
   {
     displayDate: 'April 2024',

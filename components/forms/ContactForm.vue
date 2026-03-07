@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ContactForm } from '~/types/contact/contact.types'
 import { Check, Copy, Send } from 'lucide-vue-next'
-import { emailAddress } from '~/constants/social-links'
+import { EMAIL_ADDRESS } from '~/constants/social-links'
 import { contactSchema } from '~/types/contact/contact.types'
 
 const { isMobile } = useDetectMobile()
@@ -48,7 +48,7 @@ function handleError() {
 function copyEmail() {
   if (emailCopied.value)
     return
-  navigator.clipboard.writeText(emailAddress)
+  navigator.clipboard.writeText(EMAIL_ADDRESS)
   emailCopied.value = true
   setTimeout(() => emailCopied.value = false, 2000)
 }
@@ -121,8 +121,8 @@ async function submitForm() {
         :class="{ 'animate-shake': flashError }"
       >
         Error! Please try again, or email me directly at
-        <a :href="`mailto:${emailAddress}`">
-          {{ emailAddress }}
+        <a :href="`mailto:${EMAIL_ADDRESS}`">
+          {{ EMAIL_ADDRESS }}
         </a>
       </h3>
       <h3 v-else class="items-center gap-2">
@@ -131,7 +131,7 @@ async function submitForm() {
           class="inline-flex items-center gap-2"
           @click="copyEmail"
         >
-          {{ emailAddress }}
+          {{ EMAIL_ADDRESS }}
           <Transition name="fade" mode="out-in">
             <BaseIcon
               :key="emailCopied ? 'check' : 'copy'"

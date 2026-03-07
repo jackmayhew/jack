@@ -1,21 +1,21 @@
 import { Github, Mail } from 'lucide-vue-next'
 
-export const twitterUsername = 'https://x.com/username'
-export const githubUsername = 'https://github.com/jackmayhew'
-export const emailAddress = 'hello@jackmayhew.com'
-export const websiteUrl = 'https://jackmayhew.com'
+export const TWITTER_USERNAME = 'https://x.com/username'
+export const GITHUB_USERNAME = 'https://github.com/jackmayhew'
+export const EMAIL_ADDRESS = 'hello@jackmayhew.com'
+export const WEBSITE_URL = 'https://jackmayhew.com'
 
 export const socialLinks = [
   {
     type: 'github',
-    href: githubUsername,
+    href: GITHUB_USERNAME,
     target: '_blank',
     rel: 'noopener',
     icon: Github,
     size: 36,
   },
   // {
-  //   href: twitterUsername,
+  //   href: TWITTER_USERNAME,
   //   target: '_blank',
   //   rel: 'noopener',
   //   icon: 'lucide:twitter',
@@ -23,7 +23,7 @@ export const socialLinks = [
   // },
   {
     type: 'email',
-    href: `mailto:${emailAddress}`,
+    href: `mailto:${EMAIL_ADDRESS}`,
     icon: Mail,
     size: 36,
   },

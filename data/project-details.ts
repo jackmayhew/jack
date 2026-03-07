@@ -1,5 +1,5 @@
 import type { ProjectDetails } from '~/types/project/project-details-types'
-import { githubUsername } from '~/constants/social-links'
+import { GITHUB_USERNAME } from '~/constants/social-links'
 
 export const projectDetails: ProjectDetails[] = [
   {
@@ -15,7 +15,7 @@ export const projectDetails: ProjectDetails[] = [
     ],
     stack: 'Nuxt 4, TypeScript, Pinia, Zod, Fastify, PostgreSQL',
     url: 'https://soundle.game/',
-    githubUrl: `${githubUsername}/soundle`,
+    githubUrl: `${GITHUB_USERNAME}/soundle`,
 
   },
   {
@@ -56,6 +56,6 @@ export const projectDetails: ProjectDetails[] = [
     ],
     stack: 'Vue 3, TypeScript, UnoCSS, Fastify, PostgreSQL',
     url: 'https://getloon.ca/',
-    githubUrl: `${githubUsername}/loon`,
+    githubUrl: `${GITHUB_USERNAME}/loon`,
   },
 ]
