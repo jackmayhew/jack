@@ -34,7 +34,7 @@ export const projectCards: ProjectCard[] = [
     date: '2025',
     desc: `A browser extension that finds Canadian alternatives and deals while you shop online, making it easy to support local businesses.`,
     url: 'https://getloon.ca/',
-    stack: 'Vue 3, TypeScript, UnoCSS, Fastify, Supabase',
+    stack: 'Vue 3, TypeScript, UnoCSS, Fastify, PostgreSQL',
     image: '/img/projects/loon.webp',
   },
 ]
