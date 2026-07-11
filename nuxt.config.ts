@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     url: WEBSITE_URL,
   },
   ssr: false,
+  experimental: {
+    viteEnvironmentApi: true,
+  },
   devtools: { enabled: true },
   imports: {
     dirs: [
@@ -71,6 +74,17 @@ export default defineNuxtConfig({
           drop_debugger: true,
         },
       },
+    },
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        '@vueuse/core',
+        'gsap',
+        'gsap/ScrollTrigger',
+        'gsap/SplitText',
+        'lucide-vue-next',
+      ],
     },
   },
   nitro: {
