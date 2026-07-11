@@ -5,10 +5,10 @@ export default defineNuxtConfig({
   site: {
     url: WEBSITE_URL,
   },
-  // ssr: false,
-  // experimental: {
-  //   viteEnvironmentApi: true,
-  // },
+  ssr: false,
+  experimental: {
+    viteEnvironmentApi: true,
+  },
   devtools: { enabled: true },
   imports: {
     dirs: [
