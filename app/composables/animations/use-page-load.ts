@@ -1,10 +1,5 @@
 import gsap from 'gsap'
 
-/**
- * Fades in a target element using GSAP.
- * @param target - The element to animate.
- * @returns An object with a `cleanup` function to call on component unmount.
- */
 export function pageLoadGSAP(target: gsap.DOMTarget, onComplete?: () => void) {
   if (!target) {
     return { cleanup: () => {} }

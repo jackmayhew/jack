@@ -20,8 +20,8 @@ const { isMobile } = useDetectMobile()
 const route = useRoute()
 
 // --- state ---
-const wrapper = ref<HTMLElement | null>(null)
-const wrapperInner = ref<HTMLElement | null>(null)
+const wrapper = useTemplateRef<HTMLDivElement>('wrapper')
+const wrapperInner = useTemplateRef<HTMLDivElement>('wrapperInner')
 const menuHeight = ref<number | null>(null)
 const menuIsOpen = ref<boolean>(false)
 const menuIsAnimating = ref<boolean>(false)

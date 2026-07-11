@@ -3,13 +3,8 @@ import gsap from 'gsap'
 import { SplitText } from 'gsap/SplitText'
 
 let splitTextInstance: SplitText | null = null
-const bandRef = ref<HTMLParagraphElement | null>(null)
+const bandRef = useTemplateRef<HTMLParagraphElement>('bandRef')
 
-/**
- * Animates the headline text with SplitText.
- * Exposed to the parent component so it can be added to a master timeline.
- * @returns {gsap.core.Timeline} The animation timeline.
- */
 function gsapText() {
   if (!bandRef.value)
     return gsap.timeline()

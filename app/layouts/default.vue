@@ -4,7 +4,7 @@ const { isMobile } = useDetectMobile()
 setupHead()
 
 const initialLoad = ref<boolean>(true)
-const mainContentRef = ref<HTMLDivElement | null>(null)
+const mainContentRef = useTemplateRef<HTMLDivElement>('mainContentRef')
 
 provide('initialLoad', initialLoad)
 
