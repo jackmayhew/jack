@@ -4,7 +4,6 @@ import { EMAIL_ADDRESS } from '~/constants/social-links'
 import { contactSchema } from '~/types/contact/contact.types'
 
 // todo: add rate limiting. really not a priority
-
 export default defineEventHandler(async (event) => {
   if (!process.env.RESEND_API_KEY) {
     throw createError({
