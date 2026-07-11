@@ -8,21 +8,21 @@ const initialLoad = inject<Ref<boolean>>('initialLoad', ref(false))
 const delay = computed(() => initialLoad.value ? 0.5 : 0.2)
 
 const headlineRef = ref<{ gsapText: () => gsap.core.Timeline } | null>(null)
-const heroImageRef = ref<{ $el: HTMLElement } | null>(null)
+// const heroImageRef = ref<{ $el: HTMLElement } | null>(null)
 
-function gsapImage() {
-  const tl = gsap.timeline()
+// function gsapImage() {
+//   const tl = gsap.timeline()
 
-  if (!heroImageRef.value?.$el)
-    return tl
+//   if (!heroImageRef.value?.$el)
+//     return tl
 
-  tl.fromTo(
-    heroImageRef.value.$el,
-    { y: 40, autoAlpha: 0 },
-    { y: 0, autoAlpha: 1, duration: 0.5, ease: 'power2.out' },
-  )
-  return tl
-}
+//   tl.fromTo(
+//     heroImageRef.value.$el,
+//     { y: 40, autoAlpha: 0 },
+//     { y: 0, autoAlpha: 1, duration: 0.5, ease: 'power2.out' },
+//   )
+//   return tl
+// }
 
 onMounted(async () => {
   await document.fonts.ready
@@ -36,7 +36,7 @@ onMounted(async () => {
 
     masterTimeline
       .add(textAnimation)
-      .add(gsapImage(), '<0.1')
+      // .add(gsapImage(), '<0.1')
   }
 })
 </script>
@@ -55,8 +55,7 @@ onMounted(async () => {
         height="358"
       > -->
       <NuxtImg
-        ref="heroImageRef"
-        class="w-full h-auto block rounded-lg invisible opacity-0"
+        class="w-full h-auto block rounded-lg"
         src="/img/hero.gif"
         alt="Jack at computer"
         fetchpriority="high"

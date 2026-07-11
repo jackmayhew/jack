@@ -41,25 +41,25 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in',
     },
-    head: {
-      link: [
-        { rel: 'preload', href: '/img/hero2.gif', as: 'image' },
-        {
-          rel: 'preload',
-          href: '/fonts/ShadowHand.ttf',
-          as: 'font',
-          type: 'font/ttf',
-          crossorigin: 'anonymous',
-        },
-        {
-          rel: 'preload',
-          href: '/fonts/JetBrainsMono[wght].ttf',
-          as: 'font',
-          type: 'font/ttf',
-          crossorigin: 'anonymous',
-        },
-      ],
-    },
+    // head: {
+    //   link: [
+    //     { rel: 'preload', href: '/img/hero2.gif', as: 'image' },
+    //     {
+    //       rel: 'preload',
+    //       href: '/fonts/ShadowHand.ttf',
+    //       as: 'font',
+    //       type: 'font/ttf',
+    //       crossorigin: 'anonymous',
+    //     },
+    //     {
+    //       rel: 'preload',
+    //       href: '/fonts/JetBrainsMono[wght].ttf',
+    //       as: 'font',
+    //       type: 'font/ttf',
+    //       crossorigin: 'anonymous',
+    //     },
+    //   ],
+    // },
   },
   colorMode: {
     preference: 'light',
