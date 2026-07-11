@@ -1,4 +1,4 @@
-import { WEBSITE_URL } from './constants/social-links'
+import { WEBSITE_URL } from './app/constants/social-links'
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -23,6 +23,9 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     '@nuxtjs/mdc',
   ],
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+  },
   components: [
     {
       path: '~/components/prose',
@@ -84,6 +87,7 @@ export default defineNuxtConfig({
         'gsap/ScrollTrigger',
         'gsap/SplitText',
         'lucide-vue-next',
+        'zod',
       ],
     },
   },
