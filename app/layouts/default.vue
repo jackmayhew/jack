@@ -22,7 +22,7 @@ onMounted(() => {
     :class="{ 'no-transition': isMobile }"
   >
     <Navbar class="relative max-w-screen-md mx-auto" />
-    <div ref="mainContentRef" class="px-6 mt-[6.5rem]">
+    <div ref="mainContentRef" class="main-content px-6 mt-[6.5rem] invisible">
       <slot />
     </div>
   </div>
