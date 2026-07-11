@@ -87,7 +87,6 @@ export default defineNuxtConfig({
         'gsap/ScrollTrigger',
         'gsap/SplitText',
         'lucide-vue-next',
-        'zod',
       ],
     },
   },
